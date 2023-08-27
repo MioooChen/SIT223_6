@@ -19,15 +19,16 @@ pipeline {
                 success {
                     emailext subject: "Tests Success: ${currentBuild.fullDisplayName}",
                              body: "Unit and integration tests have passed.",
-                             to: EMAIL_TO_NOTIFY,
+                             to: "${env.EMAIL_TO_NOTIFY}",
                              attachLog: true
                 }
                 failure {
                     emailext subject: "Tests Failure: ${currentBuild.fullDisplayName}",
                              body: "Unit and integration tests have failed. Please review the logs.",
-                             to: EMAIL_TO_NOTIFY,
+                             to: "${env.EMAIL_TO_NOTIFY}",
                              attachLog: true
                 }
+            }
             }
         }
         
