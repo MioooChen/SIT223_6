@@ -9,9 +9,9 @@ pipeline {
             steps {
                 echo 'Running Build stage...'
             }
-        }
+    }
         
-        stage('Unit and Integration Tests') {
+    stage('Unit and Integration Tests') {
             steps {
                 echo 'Running Unit and Integration Tests stage...'
             }
@@ -21,16 +21,12 @@ pipeline {
                         subject: "Tests Success: ${currentBuild.fullDisplayName}",
                         body: "Unit and integration tests have passed."
                         }
-        }
+    }
         
-        stage('Code Analysis') {
+    stage('Code Analysis') {
             steps {
                 echo 'Running Code Analysis stage...'
             }
-        }
-        
-        
-        
-    
     }
+
 }
