@@ -29,7 +29,7 @@ pipeline {
                              attachLog: true
                 }
             }
-            }
+            
         }
         
         stage('Code Analysis') {
