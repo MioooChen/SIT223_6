@@ -74,6 +74,7 @@ pipeline {
                          subject: "Tests Success: ${currentBuild.fullDisplayName}",
                          body: "Deploy to Production tests have passed."
                 }
+            }
         }
         
     }
