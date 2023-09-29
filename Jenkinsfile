@@ -22,7 +22,7 @@ pipeline {
             post {
                 always {
                     mail to: "${env.EMAIL_TO_NOTIFY}",
-                         subject: "Tests Success: ${currentBuild.fullDisplayName}",
+                         subject: "Unit and Integration Tests Success: ${currentBuild.fullDisplayName}",
                          body: "Unit and integration tests have passed."
                 }
             }
@@ -44,7 +44,7 @@ pipeline {
             post {
                 always {
                     mail to: "${env.EMAIL_TO_NOTIFY}",
-                         subject: "Tests Success: ${currentBuild.fullDisplayName}",
+                         subject: "Security Scan Tests Success: ${currentBuild.fullDisplayName}",
                          body: "Security Scan tests have passed."
                 }
             }
@@ -71,7 +71,7 @@ pipeline {
             post {
                 always {
                     mail to: "${env.EMAIL_TO_NOTIFY}",
-                         subject: "Tests Success: ${currentBuild.fullDisplayName}",
+                         subject: "Deploy to Production Tests Success: ${currentBuild.fullDisplayName}",
                          body: "Deploy to Production tests have passed."
                 }
             }
